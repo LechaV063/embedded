@@ -1,0 +1,26 @@
+td, th {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+b {
+    font-size: 18px;
+    font-style: italic;
+}
+
+a {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    align-items: center;
+}
+
+span {
+    font-size: 18px;
+    color: blue;
+    font-style: oblique;
+    border: 1px solid;
+}
