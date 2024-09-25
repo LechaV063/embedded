@@ -26,6 +26,7 @@ span {
 
 td, th {
     border: 1px solid;
+    border-radius: 15px;
     font-size: 20px;
     background-color: aquamarine;
     text-align: center;
