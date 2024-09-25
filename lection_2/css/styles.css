@@ -31,6 +31,7 @@ td, th {
     background-color: aquamarine;
     text-align: center;
     height: 30px;
+    box-shadow: 10px 5px 15px black;
 }
 
 h1,h2 {
