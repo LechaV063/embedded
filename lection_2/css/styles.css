@@ -49,8 +49,19 @@ ul {
 body .for_body {
     padding-left: 15%;
     padding-right: 15%;
+
 }
 
 #resolv {
     font-size: 20px;
+}
+
+.body {
+    position: relative;
+    width: 1024px;
+    margin: auto;
+    padding: 100px 50px;
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
