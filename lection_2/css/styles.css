@@ -1,0 +1,77 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 28px;
+    background-color: rgb(220, 220, 220);
+    /* background-image: url(../img/pattern-timer-grid-3.png); */
+}
+
+b {
+    font-size: 18px;
+    font-style: italic;
+}
+
+span {
+    font-size: 18px;
+    color: blue;
+    font-style: oblique;
+    border: 1px solid;
+}
+
+.for_back {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: aquamarine;
+    text-align: center;
+    height: 30px;
+    box-shadow: 10px 5px 15px black;
+}
+
+h1,h2 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+.for_body {
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+ul {
+    list-style-type: none;
+}
+
+body .for_body {
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+
+#resolv {
+    font-size: 20px;
+}
+
+.body {
+    position: relative;
+    width: 1024px;
+    margin: auto;
+    padding: 100px 50px;
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 4</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="body">
+    <div class="for_back">
+      <a href="index.html">На главную</a>
+    </div>
+    <div class="for_body">
+      <h1>Задача №4</h1>
+      <hr>
+      <h2>Дано:</h2>
+      <ul>
+        <li>R1 = 5.1 Ом,</li>
+        <li>R2 = 13 Ом,</li>
+        <li>R3 = 2.7 Ом,</li>
+        <li>R4 = 12 Ом,</li>
+        <li>R5 = 36 Ом,</li>
+        <li>R6 = 16 Ом,</li>
+        <li>R7 = 34 Ом,</li>
+        <li>E = 9 В</li>
+      </ul>
+      <img src="img/task4.png" alt="Схема 4" height="250" />
+      <hr>
+      <h2>Найти:</h2>
+      R<sub>AB</sub>, I<sub>AB</sub> - ?
+      <h2>Решение:</h2>
+      <div id="resolv">
+        Разобьём цепь на 3 участка: <br />
+        R<sub>участ.1</sub> = 1/(1/(R1 + R2) + 1/R3) = 1/(1/(5.1 + 13) + 1/2.7) = 2.349519231
+        Ом,<br />
+        R<sub>участ.2</sub> = 1/(1/R5 + 1/R6 + 1/R7) = 1/(1/36 + 1/16 +1/34) = 8.354948805
+        Ом, <br />
+        R<sub>AB</sub> = R<sub>участ.1</sub> + R<sub>участ.2</sub> + R4 = 2.349519231 + 8.354948805 + 12 =
+        <span>22.704468036 </span>Ом,<br />
+        I<sub>AB</sub> = E / R<sub>AB</sub> = 9 / 22.704468036 = <span>0.396397748 </span>А. <br />
+        <hr>
+      </div>
+      <h2>Ответ:</h2>
+        <ul>
+          <li>Эквивалентное сопротивление A - B равно <span>22.704468036 </span>Ом,</li>
+          <li>Ток в цепи между A - B равен <span>0.396397748 </span>А.</li>
+        </ul>
+    </div>
+  </body>
+</html>

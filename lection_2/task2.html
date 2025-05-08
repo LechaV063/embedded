@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="body">
+    <div class="for_back">
+      <a href="index.html">На главную</a>
+    </div>
+    <div class="for_body">
+      <h1>Задача №2</h1>
+      <hr>
+      <h2>Дано:</h2>
+      <ul>
+        <li>E = 24 V</li>
+        <li>R1,R2 = 18 Ом</li>
+        <li>R<sub>лам</sub> = 9 Ом</li>
+        <li>I<sub>общ</sub> = 0.875 А</li>
+      </ul>
+      <img src="img/task2.png" alt="Схема 2" height="150" />
+      <hr>
+      <h2>Найти:</h2>
+      r - ?
+      <hr>
+      <h2>Решение:</h2>
+      <div id="resolv">
+        Схема преобразуется в паралелльное соединение трех цепей. Таким образом:
+        <br />
+        1/R<sub>общ</sub> = 1/R1 + 1/R2 + 1/R<sub>лам</sub> = 0.222222222 См,<br />
+        или R<sub>общ</sub> = 1 / 0.222222222 = 4.5 Ом<br />
+        U<sub>пад.внеш</sub> = I<sub>общ</sub> * R<sub>общ</sub> = 0.875 * 4,5 = 3.9375 В,<br />
+        U<sub>пад.внутр</sub>. = E - U<sub>пад.внеш</sub> = 24 / 3.9375 = 20.0625 В <br />
+        r = U<sub>пад.внутр</sub> / I<sub>общ</sub> = 20.0625 / 0.875 = <span>22.928571429</span> Ом<br />
+        <hr>
+      </div>
+      <h2>Ответ:</h2>
+      <ul>
+        <li>
+          Внутреннее сопротивление источника питания равно
+          <span>22.928571429</span> Ом.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
