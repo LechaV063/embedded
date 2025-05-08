@@ -1,10 +1,10 @@
-from env import Vsat, U_frwd
+from env import Vsat, U_fwd
 from argparse import ArgumentParser
 
 
 def step_up_l_calculate(Freq: float, Vin: float, Vout: float, Iout: float):
     T = 1/Freq
-    t_ratio = (Vout+U_frwd-Vin)/(Vin-Vsat)
+    t_ratio = (Vout+U_fwd-Vin)/(Vin-Vsat)
     t_off = T/(t_ratio + 1)
     t_on = T-t_off
     C_t = 4*0.00001*t_on
@@ -16,7 +16,7 @@ def step_up_l_calculate(Freq: float, Vin: float, Vout: float, Iout: float):
 
 def step_down_l_calculate(Freq: float, Vin: float, Vout: float, Iout: float):
     T = 1/Freq
-    t_ratio = (Vout+U_frwd)/(Vin-Vsat-Vout)
+    t_ratio = (Vout+U_fwd)/(Vin-Vsat-Vout)
     t_off = T/(t_ratio + 1)
     t_on = T-t_off
     C_t = 4*0.00001*t_on
