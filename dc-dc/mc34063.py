@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from env import Vsat, U_fwd
 from argparse import ArgumentParser
 
