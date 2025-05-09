@@ -43,7 +43,7 @@ if __name__ == "__main__":
     Rdrv = Vin/Idrv
     R1 = args.r1*1000
     R2 = ((Vout/1.25)-1)*R1
-    print(f"Резистор нижний = {R1/1000} кОм\nРезистор верхний = {R2/1000} кОм\nРезистор драйвера (8 нога) <= {Rdrv} Ом")
+    print(f"Резистор нижний = {R1/1000:.2f} кОм\nРезистор верхний = {R2/1000:.2f} кОм\nРезистор драйвера (8 нога) <= {Rdrv:.2f} Ом")
     for fr in range(20, 51, 5):
         if (Vout >= Vin):
             step_up_l_calculate(Freq=fr*1000, Vin=Vin, Vout=Vout, Iout=Iout)
