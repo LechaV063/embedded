@@ -11,8 +11,9 @@ def step_up_l_calculate(Freq: float, Vin: float, Vout: float, Iout: float):
     C_t = 4*0.00001*t_on
     i_pk = 2*Iout*(t_ratio+1)
     L = ((Vin-Vsat)/i_pk)*t_on
+    R_sens = 0.3/i_pk
     print(
-        f"Freq = {Freq/1000:.2f} кГц  C = {C_t*1e12:.2f} пФ  L >= {L*1000000:.2f} мкГн")
+        f"Freq = {Freq/1000:.2f} кГц  C = {C_t*1e12:.2f} пФ  L >= {L*1000000:.2f} мкГн  Rsens = {R_sens:.2f}")
 
 
 def step_down_l_calculate(Freq: float, Vin: float, Vout: float, Iout: float):
@@ -23,8 +24,9 @@ def step_down_l_calculate(Freq: float, Vin: float, Vout: float, Iout: float):
     C_t = 4*0.00001*t_on
     i_pk = 2*Iout
     L = ((Vin-Vsat-Vout)/i_pk)*t_on
+    R_sens = 0.3/i_pk
     print(
-        f"Freq = {Freq/1000:.2f} кГц  C = {C_t*1e12:.2f} пФ  L >= {L*1000000:.2f} мкГн")
+        f"Freq = {Freq/1000:.2f} кГц  C = {C_t*1e12:.2f} пФ  L >= {L*1000000:.2f} мкГн  Rsens = {R_sens:.2f}")
 
 
 if __name__ == "__main__":
@@ -43,8 +45,12 @@ if __name__ == "__main__":
     Rdrv = Vin/Idrv
     R1 = args.r1*1000
     R2 = ((Vout/1.25)-1)*R1
-    print(
-        f"Резистор нижний = {R1/1000:.2f} кОм\nРезистор верхний = {R2/1000:.2f} кОм\nРезистор драйвера (8 нога) <= {Rdrv:.2f} Ом")
+    if (Vout >= Vin):
+        print(
+            f"Резистор нижний = {R1/1000:.2f} кОм\nРезистор верхний = {R2/1000:.2f} кОм\nРезистор драйвера (8 нога) <= {Rdrv:.2f} Ом")
+    else:
+        print(
+            f"Резистор нижний = {R1/1000:.2f} кОм\nРезистор верхний = {R2/1000:.2f} кОм")
     for fr in range(20, 51, 5):
         if (Vout >= Vin):
             step_up_l_calculate(Freq=fr*1000, Vin=Vin, Vout=Vout, Iout=Iout)
